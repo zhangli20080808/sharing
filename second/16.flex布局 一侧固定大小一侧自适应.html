@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			padding-top:20px;
+			display: flex;
+			width: 500px; 
+			height: 400px;
+			background-color: #fff;
+			border:2px solid #ddd;
+		}
+		.item{
+			height: 30px;
+			
+		}
+		.item1{
+			background-color: #ccc;
+			/*flex-grow: 1;*/
+			flex:0 1 100px;
+		}
+		.item2{
+			background-color: #999;
+			/*flex-grow: 2;*/
+			flex:1 1 auto;
+		}
+		.item3{
+			background-color: #ccc;
+			/*flex-grow: 1;*/
+			flex:0 1 200px;
+		}
+		
+	</style>
+</head>
+<body>
+<pre>
+	一侧固定，一侧自适应。
+</pre>
+	<div class="container">
+		<div class="item item1">我是固定的100px</div>
+		<div class="item item2">我是自适应的</div>
+		<div class="item item3">我是固定的200px</div>
+	</div>
+</body>
+</html>

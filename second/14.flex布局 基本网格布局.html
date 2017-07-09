@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			padding-top:20px;
+			display: flex;
+			width: 500px; 
+			height: 400px;
+			background-color: #fff;
+			border:2px solid #ddd;
+		}
+		.item{
+			height: 30px;
+			flex-grow: 1;
+			flex-basis: 50%;
+		}
+		.item1{
+			
+			background-color: #ccc;
+	
+		}
+		.item2{
+			background-color: #999;
+
+		}
+	</style>
+</head>
+<body>
+<pre>
+	希望两个项目宽度是相同的，平分整个容器的宽度。
+</pre>
+	<div class="container">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item2">2</div>
+	</div>
+</body>
+</html>

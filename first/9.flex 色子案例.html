@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			display: flex;
+			padding:10px;
+			width: 120px;
+			height: 120px;
+			border:3px solid #ddd;
+			border-radius: 10%;
+			background: #fff;
+			box-shadow: 3px 3px 3px 0px #999;
+			margin:5px;
+		}
+		.item{
+			width: 30px;
+			height: 30px;
+			background: #999;
+			border-radius: 50%;
+			box-shadow: 1px 1px 2px 0px #999;
+		}
+		.one{
+			justify-content: center;/*水平居中*/
+			align-items: center;/*垂直居中*/
+		}
+		.two{
+			justify-content: space-around;
+    		align-items: center;
+		}
+		.two1{
+			flex-direction: column;
+    		justify-content: space-around;
+    		align-items: center;
+		}
+		.three{
+			flex-direction: column;
+    		justify-content: space-around;
+    		align-items: center;
+		}
+		.three div:first-child{
+			align-self: flex-start;
+		}
+		.three div:last-child{
+			align-self: flex-end;
+		}
+		.four{
+			flex-wrap: wrap;
+		}
+		.four .item{
+			margin:7px;
+		}
+		.four1{
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.four1 > div{
+			display: flex;
+    		justify-content: space-around;
+		}
+
+		.five{
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.five > div{
+			display: flex;
+    		justify-content: space-around;
+		}
+
+		.six{
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.six > div{
+			display: flex;
+    		justify-content: space-around;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container six">
+		<div><!-- 第一行 -->
+			<div class="item">1-1</div>
+			<div class="item">1-2</div>
+		</div>
+		<div><!-- 第二行 -->
+			<div class="item">2-1</div>
+			<div class="item">2-2</div>
+		</div>
+		<div><!-- 第三行 -->
+			<div class="item">3-1</div>
+			<div class="item">3-2</div>
+		</div>
+	</div>
+	<div class="container five">
+		<div><!-- 第一行 -->
+			<div class="item">1-1</div>
+			<div class="item">1-2</div>
+		</div>
+		<div><!-- 第二行 -->
+			<div class="item">2-1</div>
+		</div>
+		<div><!-- 第三行 -->
+			<div class="item">3-1</div>
+			<div class="item">3-2</div>
+		</div>
+	</div>
+	<div class="container four1">
+		<div><!-- 第一行 -->
+			<div class="item">1-1</div>
+			<div class="item">1-2</div>
+		</div>
+		<div><!-- 第二行 -->
+			<div class="item">2-1</div>
+			<div class="item">2-2</div>
+		</div>
+	</div>
+	<div class="container four">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+	<div class="container three">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+	<div class="container two1">
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+	<div class="container two">
+		<div class="item"></div>
+		<div class="item"></div>
+	</div>
+	<div class="container one">
+		<div class="item"></div>
+	</div>
+
+
+	
+
+</body>
+</html>

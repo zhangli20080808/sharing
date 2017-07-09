@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{
+			list-style: none;
+			padding: 0;
+			margin:0;
+		}
+		li{
+		}
+		.container{
+			padding-top:20px;
+			display: flex;
+			width: 500px; 
+			height: 400px;
+			background-color: #fff;
+			border:2px solid #ddd;
+			justify-content: space-around;
+
+		}
+
+		@media (max-width: 600px){
+			.container{
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+		}
+	
+		
+	</style>
+</head>
+<body>
+	<ul class="container">
+		<li>菜单1</li>
+		<li>菜单2</li>
+		<li>菜单3</li>
+		<li>菜单4</li>
+		<li>登陆</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			padding-top:20px;
+			display: flex;
+			width: 500px;
+			height: 400px;
+			background-color: #fff;
+
+			flex-flow: row wrap;
+			border:2px solid #ddd;
+		}
+		.item{
+			height: 30px;
+			width: 150px;
+			
+		}
+		.item1{
+			width: 100px;
+			background-color: #ccc;
+			flex-grow: 1;
+		}
+		.item2{
+			width: 200px;
+			background-color: #999;
+			flex-grow: 0;
+		}
+	</style>
+</head>
+<body>
+<pre>
+ （1）统计多余的空间：M=容器的宽度-所有项目宽度之和
+      M = 500 - 100 -200 = 200px;
+  （2）确定均分的份数：N=项目flex-grow的值之和
+      N = 1 + 0 = 1;
+  （3）计算单位空间P=M/N。
+      P = 200px/1 = 200px;
+  （4）项目放大后的宽度：R=宽度+P*当前flex-grow值
+
+     item1 : 100 +200*1 = 300
+     item2 : 200 + 200* 0 = 200;
+</pre>
+	<div class="container">
+		<div class="item item1" >1</div>
+		<div class="item item2" >2</div>
+	</div>
+</body>
+</html>

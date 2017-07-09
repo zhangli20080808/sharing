@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			display: flex;
+			flex-flow: column nowrap;
+		}
+		body > *{
+			text-align: center;
+			color:white;
+			font-size: 30px;
+		}
+		header,footer{
+			background: #333;
+			height: 50px;
+			
+		}
+		section{
+			display: flex;
+		}
+		nav{
+			width: 100px;
+			background: #aaa;
+			flex:0 1 100px;
+
+		}
+		.sidebar{
+			width: 150px;
+			background: #eee;
+			flex:0 1 150px;
+			order:-1;
+		}
+		.main{
+			width: 500px;
+			background: #ccc;
+			flex:1 1 auto;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		头部
+	</header>
+	<section>
+		<nav>导航</nav>
+		<div class="main">主体部分
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		<p>我是凑行数的</p>
+		</div>
+		<div class="sidebar">侧边栏</nav>
+	</section>
+	<footer>
+		底部
+	</footer>
+</body>
+</html>

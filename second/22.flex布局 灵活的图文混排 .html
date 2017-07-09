@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			display: flex;
+		}
+		.imgbox{
+			order:1;
+		}
+		.txtbox{
+			order:2;
+		}
+
+		.reverse .imgbox{
+			order:2;
+		}
+		.reverse .txtbox{
+			order:1;
+		}
+		.flex-v{
+			flex-direction: column;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<h2>下面下图上字</h2>
+	<div class="container flex-v reverse">
+		<div class="imgbox">
+			<img src="img/itbull.png" alt="">
+		</div>
+		<div class="txtbox">
+			我是泰牛程序员
+		</div>
+	</div>
+	
+	<h2>下面上图下字</h2>
+	<div class="container flex-v">
+		<div class="imgbox">
+			<img src="img/itbull.png" alt="">
+		</div>
+		<div class="txtbox">
+			我是泰牛程序员
+		</div>
+	</div>
+
+	<h2>下面左图右字</h2>
+	<div class="container">
+		<div class="imgbox">
+			<img src="img/itbull.png" alt="">
+		</div>
+		<div class="txtbox">
+			我是泰牛程序员
+		</div>
+	</div>
+
+	<h2>下面右图左字</h2>
+	<div class="container reverse">
+		<div class="imgbox">
+			<img src="img/itbull.png" alt="">
+		</div>
+		<div class="txtbox">
+			我是泰牛程序员
+		</div>
+	</div>
+</body>
+</html>

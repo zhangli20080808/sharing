@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			padding-top:20px;
+			display: flex;
+			width: 200px; /*不够 <150*2 */
+			height: 400px;
+			background-color: #fff;
+			border:2px solid #ddd;
+		}
+		.item{
+			height: 30px;
+			width: 150px;
+			
+		}
+		.item1{
+			width: 100px;
+			background-color: #ccc;
+			flex-shrink: 0;
+		}
+		.item2{
+			width: 200px;
+			background-color: #999;
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	计算步骤：
+  （1）总差值，即需要被压缩的大小：M=容器的宽度-项目的宽度之和
+      m = 200 +100 -200 = 100
+  （2）加权和：N =flex-shrink*项目宽度值之和
+      N = 1*100 + 1*200 = 300
+  （3）缩小后的宽度 = 项目值 -  项目值 * flex-shrink /N  * M。
+     item1 = 100 - 100 * 1/300 * 100
+     item2 = 200 - 200 * 1/300 * 100
+</pre>
+	<div class="container">
+		<div class="item item1" >1</div>
+		<div class="item item2" >2</div>
+	</div>
+</body>
+</html>

@@ -3,6 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!--
+	    取值：flex-start 默认 | flex-end | center | space-between | space-around
+    	功能：容器内的项目在按主轴方向上进行排列，这个属性决定了项目与项目之间的位置关系。
+    	在主轴方向上有富余的空间（项目的宽度之和小于容器的宽度），如何去处理这个富余的空间？
+
+    	space-around 容器很大，项目不足以撑满这个容器，所以会有一部分空白环绕。让项目之间有相等空间
+    	进行环绕
+
+    	space-between  项目与项目之间空间是相等的  类似于两端对齐的效果
+
+
+	-->
 	<style>
 		.container{
 			padding-top:20px;
@@ -12,7 +24,8 @@
 			background-color: #ccc;
 
 			flex-flow: row wrap;
-			justify-content: flex-end;
+
+			justify-content: space-around ;
 		}
 		.item{
 			height: 30px;

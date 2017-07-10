@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>实现完美的居中效果</title>
 </head>
+<!--让父元素变化的过程，子元素居中的效果-->
 <style>
 	.container{
 		width: 200px;
@@ -16,7 +17,7 @@
 	.item{
 		width: 50px;
 		height: 50px;
-		background-color: #fff;
+		background-color: red;
 		margin:auto;
 	}
 </style>
@@ -28,3 +29,33 @@
 	</div>
 </body>
 </html>
+<!--
+
+小概念
+容器：如果你给一个元素添加display:flex，称为这是一个容器。
+项目：容器里面的直接子元素，称为项目
+
+主轴和交叉轴
+
+主轴：在容器当中，项目（多个）按一定的方向进行排列的。默认是按从左向右的方向进行排列。
+这里排列的方向就是主轴方向，在容器内部，主轴方向与容器交集的部分，就是主轴。
+交叉轴。就是与主轴垂直的那个轴。默认是从上向下的方向。
+
+容器的属性值
+
+flex-direction
+功能：设置主轴的方向（项目排列的方向）
+取值：row | row-reverse | column | column-reverse
+
+
+flex-wrap
+取值：nowrap | wrap | wrap-reverse 功能：控制容器中的项目的换行。
+
+主轴方向是水平方向。
+
+
+flex-flow
+功能：简化代码。是flex-direction与flex-wrap的合写。
+flex-flow: flex-direction flex-wrap
+
+-->

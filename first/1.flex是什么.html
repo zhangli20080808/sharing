@@ -10,13 +10,18 @@
 	</style>
 </head>
 <body>
+<!--对于一个容器来讲，我们给他设置flex，他的子元素会发生一系列的变化
+
+ 1.会将直接的子元素改成display:block
+ 2.对于嵌套的子元素，或者孙子辈的，是不产生影响的  比如p.APP里面的span
+ -->
 	<div>
 		<a href="">a</a>
 		<span>span</span>
 		<p>p</p>
 		<input type="text">
 		<img src="img/itbull.png" alt="">
-		<p>
+		<p class="APP">
 			<span>1</span><span>2</span>
 		</p>
 	</div>

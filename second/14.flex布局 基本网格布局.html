@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		.container{
-			padding-top:20px;
-			display: flex;
-			width: 500px; 
-			height: 400px;
-			background-color: #fff;
-			border:2px solid #ddd;
-		}
-		.item{
-			height: 30px;
-			flex-grow: 1;
-			flex-basis: 50%;
-		}
-		.item1{
-			
-			background-color: #ccc;
-	
-		}
-		.item2{
-			background-color: red;
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--
+    flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+   该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。
 
-		}
-		.container2{
-			padding-top:20px;
-			display: flex;
-			width: 500px;
-			height: 400px;
-			background-color: #ccc;
-			border:2px solid #ddd;
-		}
-		.app{
-			flex: 1;
-		}
-		.app1{background: yellow}
-		.app2{background: blue}
-		.app3{background: green}
-	</style>
+    总结
+   flex就是一个 display的属性值。
+    它约定了一套设置项目的大小，排列，排序的规则。
+    -->
+    <style>
+        .container {
+            padding-top: 20px;
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+        }
+
+        .item {
+            height: 30px;
+            flex-grow: 1;
+            flex-basis: 50%;
+        }
+
+        .item1 {
+
+            background-color: #ccc;
+
+        }
+
+        .item2 {
+            background-color: red;
+
+        }
+
+        .container2 {
+            padding-top: 20px;
+            display: flex;
+            width: 500px;
+            height: 400px;
+            background-color: #ccc;
+            border: 2px solid #ddd;
+        }
+
+        .app {
+            flex: 1;
+        }
+
+        .app1 {
+            background: yellow
+        }
+
+        .app2 {
+            background: blue
+        }
+
+        .app3 {
+            background: green
+        }
+    </style>
 </head>
 <body>
 <pre>
 	希望两个项目宽度是相同的，平分整个容器的宽度。
 </pre>
-	<div class="container">
-		<div class="item item1">1</div>
-		<div class="item item2">2</div>
-	</div>
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+</div>
 
 
-	<div class="container2">
-		<div class="app app1">1</div>
-		<div class="app app2">2</div>
-		<div class="app app3">3</div>
-	</div>
+<div class="container2">
+    <div class="app app1">1</div>
+    <div class="app app2">2</div>
+    <div class="app app3">3</div>
+</div>
 
 </body>
 </html>

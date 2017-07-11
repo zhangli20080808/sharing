@@ -3,6 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
+	<!--
+	Auto：计算的过程
+对于块状元素来讲，它要独占一行（在不给width情况下，它充满一整行）。
+如果你它设置了width值，但在水平方向上，还有剩余的空间（它的宽度比外部的容器的宽度要小），
+这个空间就会被用来计算。
+1. 一侧auto另一侧固定：auto就是整个多余空间 - 另一个侧的固定值。
+
+
+block盒子 为什么不能垂直方向居中呢？
+对于元素来讲，如果不设置高度，在垂直方向上，它不会去铺满整个列。所以在垂直方向上，它没有多余的空间给它。
+
+	-->
 	<style>
 		
 		.container{
@@ -16,7 +29,16 @@
 			width: 50px;
 			height: 50px;
 			background: #ccc;
+			/*四个方向上呢 auto都是有效的*/
 			margin:auto;
+
+			/*margin-right: 20px;*/
+			/*margin-left: auto;*/
+
+			/*两侧都是auto 会分配多余空间*/
+			/*margin-right: auto;*/
+			/*margin-left: auto;*/
+
 		}
 	
 		

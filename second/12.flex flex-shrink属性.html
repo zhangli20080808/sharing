@@ -3,6 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!--
+	取值：数值   功能：缩小因子。使用前提：主轴方向上的空间不够，项目被压缩。
+	默认值为1（当容器主轴方向不能容下全部的项目，并且也不允许换行，由于flex-shrink为1，
+	所有的项目都会被压缩。各自被压缩数值是不一样的，如下公式）.
+
+  计算步骤：
+  （1）总差值，即需要被压缩的大小：M=容器的宽度-项目的宽度之和
+  （2）加权和：N =flex-shrink*项目宽度值之和
+  （3）缩小后的宽度 = 项目值 -  项目值 * flex-shrink /N  * M。
+
+  结论：
+	项目默认会被缩小（空间不够）.flex-shrink：1
+	Flex-shrink越大，被压缩越多。
+	Flex-shrink越小，被压缩越少。如果flex-shrink=0，不会被压缩。
+	-->
+
 	<style>
 		.container{
 			padding-top:20px;
@@ -20,7 +36,7 @@
 		.item1{
 			width: 100px;
 			background-color: #ccc;
-			flex-shrink: 0;
+			flex-shrink: 1;
 		}
 		.item2{
 			width: 200px;
